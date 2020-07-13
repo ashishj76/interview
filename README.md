@@ -52,16 +52,17 @@ What is the difference between Monolithic, SOA and Microservices Architecture? W
 - Microservice Architecture is an architectural style that structures an application as a collection of small autonomous services, modeled around a business domain.
 
 What are main differences between Microservices and Monolithic Architecture? What are main differences between Microservices and Monolithic Architecture?
-Microservices
-- Service Startup is fast
-- Microservices are loosely coupled architecture.
-- Changes done in a single data model does not affect other Microservices.
-- Microservices focuses on products, not projects
-Monolithic Architecture
-- Service startup takes time
-- Monolithic architecture is mostly tightly coupled.
-- Any changes in the data model affect the entire database
-- Monolithic put emphasize over the whole project
+
+- Microservices
+	- Service Startup is fast
+	- Microservices are loosely coupled architecture.
+	- Changes done in a single data model does not affect other Microservices.
+	- Microservices focuses on products, not projects
+- Monolithic Architecture
+	- Service startup takes time
+	- Monolithic architecture is mostly tightly coupled.
+	- Any changes in the data model affect the entire database
+	- Monolithic put emphasize over the whole project
 
 # .NET Core
 ------------
