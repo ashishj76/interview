@@ -1,21 +1,21 @@
-What is AWS
+# What is AWS
 Amazon Web Services is a cloud services platform and is a subsidiary of amazon
 AWS allows individuals and business both large and content to scale through compute power, online storage and content delivery on a pay as you go basis
 AWS provides services for online storage and delivers dynamic and static content globally.
 With AWS you can create any online application you require. AWS is a leader amongst cloud providers allowing its users to become more agile
 
-Tell about yourself and why you want to work in AWS role
+# Tell about yourself and why you want to work in AWS role
 I have always been someone who is technically minded and over the years I have built up a wide array of skills, qualities and experience that will enable to  excel within AWS position.
 Just some of the skills and qualitied I possess include an understanding of AWS, its uses, best practices and procedures, proficiency in cloud based applications using AWS, an understanding of s3, AMI, EC2, SQS, and also how all of these integrate with AWS.
 I am able to work well both on my own and as part of team and I can be relied upon to work quickly, to a high standard and also within strict timelines.
 If hired, I will always work hard to help achieve commercial objectives and follow Amazon leadership principles in everything I do. 
 
-Why you want to work for Amazon?
+# Why you want to work for Amazon?
 I would like work for amazon not only because it is only one of the greatest companies in the world, but also desire to continually innovate, create and design ground breaking products and services.
 I am type of person who doesn’t want to sit still in my job and just do bare minimum. I want to constantly evolve, improve and learn the skills and experience I have gained.
 Amazon will continue to thrive as it puts customers at front of everything it does. For those reasons I feel immensely proud to work for Amazon in this AWS position. 
 
-What are the core services/components on AWS?
+# What are the core services/components on AWS?
 There are many components or services that AWS offers. The core ones can be broken down into storage, management, security, databases, mobile services, application services, networks and analytical services.
 Some of the standout components are EC2 - which provides scalable compute capacity in cloud. VPC allows users to create their own virtual private networks where they have complete control to launch any AWS services.
 There are many services in storage that AWS offers such s3, EBS. Databases are also key component of AWS with services such as RDS which enables the quick setup and use of rational database via the cloud.
@@ -35,37 +35,37 @@ Networking
 	- CloudFront
 	- Route53
 
-What is Geo Targeting and how you setup in CloudFront
+# What is Geo Targeting and how you setup in CloudFront
 	- It is concept where you can show personalized content to the users based on the geographoc location without chnaging the Url
 	- AWS allows to send the customized ontent thru cloudfront
 	- CloudFront delivers the content to end user at high speed and with low latency
 	- CloudFront detect the country and forward the country code as origin server in header CloudFront-Viewer-Country
 
-Steps involved in CloudFormation
+# Steps involved in CloudFormation
 	- Create template in JSON/YAML
 	- Save code in S3
 	- Use AWS Cloudformation to create the stack
 	- It will create the stack in the order which is defined in the templates. It will create the dependent resources first. In case of failure it will rollback
 
-Upgrade/downgrade the system with near 0 downtime (vertical and horizontal scaling)
+# Upgrade/downgrade the system with near 0 downtime (vertical and horizontal scaling)
 	- Start ec2 console with required configuration
 	- Add new machine in autoscaling
 	- Terminate the old one
 
-Tools to analyze cost in AWS
+# Tools to analyze cost in AWS
 	- AWS Cost dashboard - Table shows the top free service by usage
 	- AWS Cost Explorer - will allow to analyze the pattern and can forecast in coming months
 	- AWS Budgets - plan your service usage, costs and will alert once budget is reached
 	- Cost Allocation Tags - helps if finding the which team/resource is costing
 
-Services can be used to create centralized logging solution
+# Services can be used to create centralized logging solution
 	- CloudWatch
 	- Kinesis
 	- S3
 	- Elastic Search
 	- Cloud Trails - History of API calls for every account.
 
-How do you setup Monitoring
+# How do you setup Monitoring
 	- CloudWatch helps to monitor application status of various services  and events
 	- It can monitor
 		○ State changes in EC2
@@ -74,48 +74,50 @@ How do you setup Monitoring
 		○ API calls
 		○ Console sign-in events
 	
-Define regions and availability zones in Amazon EC2.
-Amazon web service has a global infrastructure that is divided into availability zones and regions. Each region is divided into a 
-geographic area and it has multiple isolated locations called availability zones.
+# Define regions and availability zones in Amazon EC2.
+Amazon web service has a global infrastructure that is divided into availability zones and regions. Each region is divided into a geographic area and it has multiple isolated locations called availability zones.
 
-What are the layers available in cloud computing?
+# What are the layers available in cloud computing?
 Ans:  Below listed are the various layers of cloud computing
 SaaS: Software as a Service 
 PaaS: Platform as a Service
 IaaS: Infrastructure as a Service
 DaaS: Data as Service
-Explain the various storage classes available in S3? 
+
+# Explain the various storage classes available in S3? 
 	- Standard frequency accessed 
 	- One-zone infrequency accessed 
 	- RRS - reduced redundancy storage
 	- Standard infrequency accessed 
 	- Glacier
 
-44) What are the methods to encrypt the data in S3? 
+#  What are the methods to encrypt the data in S3? 
 	- Server-Side Encryption - C 
 	- Server-Side Encryption - S3 
 	- Server-Side Encryption - KMS     
 
-What is the difference between EBS and S3?
-EBS	S3
-Highly scalable	Less scalable
-It is a block storage	It is an object storage
-EBS is faster than S3	S3 is slower than EBS
-User can access EBS only via the given EC2 instance	Anyone can access S3; it is a public instance.
+#  What is the difference between EBS and S3?
+EBS         	                    S3
+Highly scalable	                    Less scalable
+It is a block storage	            It is an object storage
+EBS is faster than S3	            S3 is slower than EBS
+User can access EBS only via 
+the given EC2 instance	
+Anyone can access S3;               it is a public instance.
 It supports File system interface	It supports Web interface
 
-What is RTO and RPO
+# What is RTO and RPO
 	- RTO - Recovery Time Objection. It is the maximum time your company is willing to wait for the recovery to finish in case of an outage.
 	- RPO - Recovery Point Objective. .It is the maximum data loss company is willing to accept as measured in time. 
 
-What is the difference between CloudFormation and Elastic Beanstalk
+# What is the difference between CloudFormation and Elastic Beanstalk
 CloudFormation	Elastic Beanstalk
 Helps you describe and provision all the infrastructure	It provides and environment where you can easily deploy  and run application in 
  resources in the Cloud environment. 	Cloud.
 It supports the infrastructure needs of many different types  of application	It Is combined with developer tools and helps you manage the lifecycle of the application.
 Such as enterprise, legacy  etc.
 
-How to use AWS WAF in monitoring AWS application?
+# How to use AWS WAF in monitoring AWS application?
 	- AWS Web Application Firewall protects your web applications from common web exploits.
 	- Helps control which traffic source to application should be allowed or blocked. 
 	- We can use WAF to create custom rules that block the common patterns.
@@ -128,7 +130,7 @@ How to use AWS WAF in monitoring AWS application?
 		○ Strings that appears in requests
 		○ Presence of malicious SQL code.
 
-What is DDoS attack and how to minimize
+# What is DDoS attack and how to minimize
 	- Denial of Service is trying to access to service using multiple sessions
 	- Tools used are AWS Shield, WAF, Route 53, CloudFront
 
@@ -149,7 +151,7 @@ AWS Leadership principles
 	- Deliver results.
 
 
-What are type of EC2 Instances?
+# What are type of EC2 Instances?
 R - Memory Optimized
 C- Computer Optimized
 R - Memory Optimized
@@ -158,7 +160,7 @@ T - burstable (based on CPU credits and are General Purpose)
 G - GPU intensives
 M - Medium Optimized
 
-Explain  CloudFormation function
+# Explain  CloudFormation function
 	- Fn:Join
 	- Fn:Select
 	- F::FindInMap
@@ -166,7 +168,7 @@ Explain  CloudFormation function
 	- Fn::FindInMap
 	- Ref
 
-What are the benefits of the Elastic Beanstalk?
+# What are the benefits of the Elastic Beanstalk?
 	1- Easy and simple: Elastic Beanstalk enables you to manage and deploy the application easily and quickly.
 	2- Autoscaling: Beanstalk scales up or down automatically when your application traffic increases or decreases. 
 	3- Developer productivity: Developers can easily deploy the application without any knowledge, but they need to maintain the application securely and user-friendly.
