@@ -111,11 +111,11 @@ It supports File system interface	It supports Web interface
 	- RPO - Recovery Point Objective. .It is the maximum data loss company is willing to accept as measured in time. 
 
 # What is the difference between CloudFormation and Elastic Beanstalk
-CloudFormation	Elastic Beanstalk
-Helps you describe and provision all the infrastructure	It provides and environment where you can easily deploy  and run application in 
- resources in the Cloud environment. 	Cloud.
-It supports the infrastructure needs of many different types  of application	It Is combined with developer tools and helps you manage the lifecycle of the application.
-Such as enterprise, legacy  etc.
+CloudFormation                                                  Elastic Beanstalk
+---------------                                                 -----------------
+Helps you describe and provision all the infrastructure	        It provides and environment where you can easily deploy  and run application in resources in the Cloud environment. 	         Cloud.
+It supports the infrastructure needs of many different types    It Is combined with developer tools and helps you manage the lifecycle  of application Such as enterprise, legacy  etc.      of the application.
+
 
 # How to use AWS WAF in monitoring AWS application?
 	- AWS Web Application Firewall protects your web applications from common web exploits.
@@ -169,14 +169,16 @@ M - Medium Optimized
 	- Ref
 
 # What are the benefits of the Elastic Beanstalk?
- 1- Easy and simple: Elastic Beanstalk enables you to manage and deploy the application easily and quickly.
- 2- Autoscaling: Beanstalk scales up or down automatically when your application traffic increases or decreases. 
- 3- Developer productivity: Developers can easily deploy the application without any knowledge, but they need to maintain the application securely and user-friendly.
- 4- Cost-effective: No charge for Beanstalk. Charges are applied for the AWS service resources which you are using for your application.
- 5- Customization: Elastic Beanstalk allows users to select the configurations of AWS services that user want to use them for application development.
- 6- Management and updates: It updates the application automatically when it changes the platform. Platform updates and infrastructure management are taken care of by AWS professionals.
+
+- Easy and simple: Elastic Beanstalk enables you to manage and deploy the application easily and quickly.
+- Autoscaling: Beanstalk scales up or down automatically when your application traffic increases or decreases. 
+- Developer productivity: Developers can easily deploy the application without any knowledge, but they need to maintain the application securely and user-friendly.
+- Cost-effective: No charge for Beanstalk. Charges are applied for the AWS service resources which you are using for your application.
+- Customization: Elastic Beanstalk allows users to select the configurations of AWS services that user want to use them for application development.
+- Management and updates: It updates the application automatically when it changes the platform. Platform updates and infrastructure management are taken care of by AWS professionals.
 
 # What are the differences between continuous integration, continuous delivery, and continuous deployment?
+
 - Developers practicing continuous integration merge their changes back to the main branch as often as possible. By doing so, you avoid the integration hell that usually happens when people wait for release day to merge their changes into the release branch.
 - Continuous delivery is an extension of continuous integration to make sure that you can release new changes to your customers quickly in a sustainable way. This means that on top of having automated your testing, you also have automated your release process and you can deploy your application at any point of time by clicking on a button.
 - continuous deployment goes one step further than continuous delivery. With this practice, every change that passes all stages of your production pipeline is released to your customers. There's no human intervention, and only a failed test will prevent a new change to be deployed to production.
