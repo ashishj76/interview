@@ -181,7 +181,14 @@ M - Medium Optimized
 - Continuous delivery is an extension of continuous integration to make sure that you can release new changes to your customers quickly in a sustainable way. This means that on top of having automated your testing, you also have automated your release process and you can deploy your application at any point of time by clicking on a button.
 - continuous deployment goes one step further than continuous delivery. With this practice, every change that passes all stages of your production pipeline is released to your customers. There's no human intervention, and only a failed test will prevent a new change to be deployed to production.
 
-Situations:
+# Situations:
+
+When did you failed in current job and how did you cope up?
+-------------------------------------------------------------------------------
+S - While working on the Auto Renewal project Business made a call to accept the autorenewal data at stores from customer even 10 months before we started the implementation
+T - Now in last 10 months we had 100+ million orders sitting in s3 folder. During the implementation we analyzed the store data and found that stores were not taking the Billing zip State and Billing year which was mandatory with the Zuora system which was our subscription platform
+A - While the team was working on the implementation I decided to fork out the from the architecture and build the utility to fix the orders. I worked with another team to come up with the repair utility in which we were wrote AWS crawler to scan through all the 100 million order, put in dynamo DB, which will trigger lambda. Lambda will call the UPS service the fetch the address and ffix the order xml and will drop it to another s3 folder. 
+R - This design failed when we tried to run it in production because crawler was not able to handle this. We had to open a ticket with AWS and tried to filter the data for crawler. We had to remove the crawler and use s3 batch to read the data and put in dynamo DB. 
 
 Customer Obsession.
 -----------------------------
