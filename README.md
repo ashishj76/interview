@@ -148,3 +148,59 @@ Factory classes provide flexibility in terms of design. Below are some of the be
 •Factory design pattern results in more decoupled code as it allows us to hide creational logic from dependant code
 •It allows us to introduce an Inversion of Control container
 •It gives you a lot more flexibility when it comes time to change the application as our creational logic is hidden from dependant code
+
+# What Is CAP Theorem?
+This states that it is not possible for a distributed computer system to simultaneously provide all three of the following guarantees:
+- Consistency (all nodes see the same data even at the same time with concurrent updates )
+- Availability (a guarantee that every request receives a response about whether it was successful or failed)
+- Partition tolerance (the system continues to operate despite arbitrary message loss or failure of part of the system).
+
+# Do you familiar with The Twelve-Factor App principles?
+The Twelve-Factor App methodology is a methodology for building software as a service applications. These best practices are designed to enable applications to be built with portability and resilience when deployed to the web.
+- Codebase - There should be exactly one codebase for a deployed service with the codebase being used for many deployments.
+- Dependencies - All dependencies should be declared, with no implicit reliance on system tools or libraries.
+- Config - Configuration that varies between deployments should be stored in the environment.
+- Backing services All backing services are treated as attached resources and attached and detached by the execution environment.
+- Build, release, run - The delivery pipeline should strictly consist of build, release, run.
+- Processes - Applications should be deployed as one or more stateless processes with persisted data stored on a backing service.
+- Port binding - Self-contained services should make themselves available to other services by specified ports.
+- Concurrency - Concurrency is advocated by scaling individual processes.
+- Disposability - Fast startup and shutdown are advocated for a more robust and resilient system.
+- Dev/Prod parity - All environments should be as similar as possible.
+- Logs - Applications should produce logs as event streams and leave the execution environment to aggregate.
+- Admin Processes - Any needed admin tasks should be kept in source control and packaged with the application.
+
+# What are Heuristic Exceptions?
+Heuristic exceptions signal undesired and possibly inconsistent outcomes of the two-phase commit protocol. Even with a transaction manager and full crash recovery, heuristics are possible due to timeouts in various subsystems or resources.
+
+A transaction is finished either with commit or rollback. But have you considered that the third transaction outcome is <<unspecified>>?The resolution of that outcome requires a third-party intervention. Saying differently somebody has to go and verify the state of data and make corrections.
+
+A Heuristic Exception refers to a transaction participant’s decision to unilaterally take some action without the consensus of the transaction manager, usually as a result of some kind of catastrophic failure between the participant and the transaction manager.
+
+In a distributed environment communications failures can happen. If communication between the transaction manager and a recoverable resource is not possible for an extended period of time, the recoverable resource may decide to unilaterally commit or rollback changes done in the context of a transaction. Such a decision is called a heuristic decision. It is one of the worst errors that may happen in a transaction system, as it can lead to parts of the transaction being committed while other parts are rolled back, thus violating the atomicity property of transaction and possibly leading to data integrity corruption.
+
+Because of the dangers of heuristic exceptions, a recoverable resource that makes a heuristic decision is required to maintain all information about the decision in stable storage until the transaction manager tells it to forget about the heuristic decision. The actual data about the heuristic decision that is saved in stable storage depends on the type of recoverable resource and is not standardized. The idea is that a system manager can look at the data, and possibly edit the resource to correct any data integrity problems.
+
+# What does ACID mean?
+- Atomicity: A transaction must be atomic. This means that either all the work done in the transaction must be performed, or none of it must be performed. Doing part of a transaction is not allowed. To be compliant with the ‘A’, a system must guarantee the atomicity in each and every situation, including power failures / errors / crashes.
+This guarantees that ‘an incomplete transaction’ cannot exist.
+- Consistency: When a transaction is completed, the system must be in a stable and consistent condition.
+- Isolation: Different transactions must be isolated from each other. This means that the partial work done in one transaction is not visible to other transactions until the transaction is committed, and that each process in a multi-user system can be programmed as if it was the only process accessing the system.In other words, it should not be possible that two transactions affect the same rows run concurrently, as the outcome would be unpredicted and the system thus made unreliable.
+- Durability: The changes made during a transaction are made persistent when it is committed. When a transaction is committed, its changes will not be lost, even if the server crashes afterwards.In other words, every committed transaction is protected against power loss/crash/errors and cannot be lost by the system and can thus be guaranteed to be completed.
+In a relational database, for instance, once a group of SQL statements execute, the results need to be stored permanently. If the database crashes right after a group of SQL statements execute, it should be possible to restore the database state to the point after the last transaction committed.
+
+# What Is Shared Nothing Architecture? How Does It Scale?
+A shared nothing architecture (SN) is a distributed computing approach in which each node is independent and self-sufficient, and there is no single point of contention required across the system.
+
+- This means no resources are shared between nodes (No shared memory, No shared file storage)
+- The nodes are able to work independently without depending on each other for any work.
+- Failure on one node affects only the users of that node, however other nodes continue to work without any disruption.
+This approach is highly scalable since it avoid the existence of single bottleneck in the system. Shared nothing is recently become popular for web development due to its linear scalability. Google has been using it for long time.
+In theory, A shared nothing system can scale almost infinitely simply by adding nodes in the form of inexpensive machines.
+
+# What Does Eventually Consistent Mean?
+Unlike relational database property of Strict consistency, eventual consistency property of a system ensures that any transaction will eventually (not immediately) bring the database from one valid state to another. This means there can be intermediate states that are not consistent between multiple nodes.
+
+Eventually consistent systems are useful at scenarios where absolute consistency is not critical. For example in case of Twitter status update, if some users of the system do not see the latest status from a particular user its may not be very devastating for system.
+
+Eventually consistent systems can not be used for use cases where absolute/strict consistency is required. For example a banking transactions system can not be using eventual consistency since it must consistently have the state of a transaction at any point of time. Your account balance should not show different amount if accessed from different ATM machines.
