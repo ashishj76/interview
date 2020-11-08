@@ -73,7 +73,7 @@ Networking
 		○ Scheduled events
 		○ API calls
 		○ Console sign-in events
-	
+
 # Define regions and availability zones in Amazon EC2.
 Amazon web service has a global infrastructure that is divided into availability zones and regions. Each region is divided into a geographic area and it has multiple isolated locations called availability zones.
 
@@ -169,12 +169,12 @@ M - Medium Optimized
 	- Ref
 
 # What are the benefits of the Elastic Beanstalk?
-	1- Easy and simple: Elastic Beanstalk enables you to manage and deploy the application easily and quickly.
-	2- Autoscaling: Beanstalk scales up or down automatically when your application traffic increases or decreases. 
-	3- Developer productivity: Developers can easily deploy the application without any knowledge, but they need to maintain the application securely and user-friendly.
-	4- Cost-effective: No charge for Beanstalk. Charges are applied for the AWS service resources which you are using for your application.
-	5- Customization: Elastic Beanstalk allows users to select the configurations of AWS services that user want to use them for application development. 
-	6- Management and updates: It updates the application automatically when it changes the platform. Platform updates and infrastructure management are taken care of by AWS professionals.
+ 1- Easy and simple: Elastic Beanstalk enables you to manage and deploy the application easily and quickly.
+ 2- Autoscaling: Beanstalk scales up or down automatically when your application traffic increases or decreases. 
+ 3- Developer productivity: Developers can easily deploy the application without any knowledge, but they need to maintain the application securely and user-friendly.
+ 4- Cost-effective: No charge for Beanstalk. Charges are applied for the AWS service resources which you are using for your application.
+ 5- Customization: Elastic Beanstalk allows users to select the configurations of AWS services that user want to use them for application development.
+ 6- Management and updates: It updates the application automatically when it changes the platform. Platform updates and infrastructure management are taken care of by AWS professionals.
 
 # What are the differences between continuous integration, continuous delivery, and continuous deployment?
 - Developers practicing continuous integration merge their changes back to the main branch as often as possible. By doing so, you avoid the integration hell that usually happens when people wait for release day to merge their changes into the release branch.
@@ -184,37 +184,42 @@ M - Medium Optimized
 # Situations:
 
 When did you failed in current job and how did you cope up?
+
 -------------------------------------------------------------------------------
-- S While working on the Auto Renewal project Business made a call to accept the autorenewal data at stores from customer even 10 months before we started the implementation
-- T Now in last 10 months we had 100+ million orders sitting in s3 folder. During the implementation we analyzed the store data and found that stores were not taking the Billing zip State and Billing year which was mandatory with the Zuora system which was our subscription platform
-- A While the team was working on the implementation I decided to fork out the from the architecture and build the utility to fix the orders. I worked with another team to come up with the repair utility in which we were wrote AWS crawler to scan through all the 100 million order, put in dynamo DB, which will trigger lambda. Lambda will call the UPS service the fetch the address and ffix the order xml and will drop it to another s3 folder. 
-- R This design failed when we tried to run it in production because crawler was not able to handle this. We had to open a ticket with AWS and tried to filter the data for crawler. We had to remove the crawler and use s3 batch to read the data and put in dynamo DB. 
+
+- (S) While working on the Auto Renewal project Business made a call to accept the autorenewal data at stores from customer even 10 months before we started the implementation
+- (T) Now in last 10 months we had 100+ million orders sitting in s3 folder. During the implementation we analyzed the store data and found that stores were not taking the Billing zip State and Billing year which was mandatory with the Zuora system which was our subscription platform
+- (A) While the team was working on the implementation I decided to fork out the from the architecture and build the utility to fix the orders. I worked with another team to come up with the repair utility in which we were wrote AWS crawler to scan through all the 100 million order, put in dynamo DB, which will trigger lambda. Lambda will call the UPS service the fetch the address and ffix the order xml and will drop it to another s3 folder.
+- (R) This design failed when we tried to run it in production because crawler was not able to handle this. We had to open a ticket with AWS and tried to filter the data for crawler. We had to remove the crawler and use s3 batch to read the data and put in dynamo DB.
 
 Customer Obsession.
 -----------------------------
-S - POS team approached with a problem that orders taken at stores are not having Billing ZipCode and CreditCard expiration year which was needed to subscription project.
-T - Did a deep dive into the situation and found that all the POS orders were store in s3 bucket, all credit card information was sent to ODS application, more than 100 million orders in s3
-A- came up with temporary cloud solution to fix all the 100 millions records in 2 weeks. As per the solution we designed a Crawler which will go through s3 and will filter out certain data and will dump to dynamo, as the row was inserted in dynamo which will trigger the lambda which in turn will call the ups service to get the zip code and ODS system to get the CC billing date and will drop the fixed order xml in another s3 folder. 
-R - When we moved the crawler to prod we had issues with the performance and had to tweak filter the monthly data in crawler. The utility was able to process all the 100+ million order on couple of days and we were able to feed the 1 year worth of data to subscription application.
+
+- (S) POS team approached with a problem that orders taken at stores are not having Billing ZipCode and CreditCard expiration year which was needed to subscription project.
+- (T) Did a deep dive into the situation and found that all the POS orders were store in s3 bucket, all credit card information was sent to ODS application, more than 100 million orders in s3
+- (A) came up with temporary cloud solution to fix all the 100 millions records in 2 weeks. As per the solution we designed a Crawler which will go through s3 and will filter out certain data and will dump to dynamo, as the row was inserted in dynamo which will trigger the lambda which in turn will call the ups service to get the zip code and ODS system to get the CC billing date and will drop the fixed order xml in another s3 folder. 
+- (R) When we moved the crawler to prod we had issues with the performance and had to tweak filter the monthly data in crawler. The utility was able to process all the 100+ million order on couple of days and we were able to feed the 1 year worth of data to subscription application.
 
 Invent & Simplify example
 ------------------------------------
-S - Gamestop migrated the website to SalesForce and were having the salesforce vendor working on it. Than business came up with the need to let vendor let go and as part that we need to migrate the build process to gitlab to from Jenkins
-T - As part if this situation I was tasked to understand the build and deployment process of website and also understand the salesforce architecture to support.
-A - We migrated the repository from bitbucket to gitlab without disrupting the existing development. Came up with the gitlab CI/CD deployment process, designed bash scripts which was used to compile the website code in docker container. We also had to open the firewall ports and generate new certificates to make sure the deployment happened.. I also also upgraded the node version 
-R - We came up with more robust and automated CI/CD process in gitlab. 
 
-Owner Ship
+- (S) Gamestop migrated the website to SalesForce and were having the salesforce vendor working on it. Than business came up with the need to let vendor let go and as part that we need to migrate the build process to gitlab to from Jenkins
+- (T) As part if this situation I was tasked to understand the build and deployment process of website and also understand the salesforce architecture to support.
+- (A) We migrated the repository from bitbucket to gitlab without disrupting the existing development. Came up with the gitlab CI/CD deployment process, designed bash scripts which was used to compile the website code in docker container. We also had to open the firewall ports and generate new certificates to make sure the deployment happened.. I also also upgraded the node version 
+- (R) We came up with more robust and automated CI/CD process in gitlab. 
+
+OwnerShip
 --------------
-S - Couple of weeks back we had issues where the OMS was not able to ingest the orders from the website because some promotions were enabled by business earlier by a day. This  impacting the sales and P1 issue was created. 
-T - We analyzed the problem and found that since new promotions were created and hence website was adding multiple promotions in the order.xml in s3 bucket. When OMS was trying to consume the orders they were seeing multiple promotions and was throwing error. So instead of moving away from the situation by saying its OMS issue, I took the ownership and came up with some solution to fix the orders.
-A - I created the PowerShell script and used aws cli to download the all the impacted orders from the S3 folder. Once downloaded used the PowerShell script to remove the extra promotions and fixed the orders. Than dropped 18k+ orders(worth 1.1M) back to s3 folder and OMS was able to re-process the orders successfully.
-R - It took 3hours to come with the solution which was impacting the customers. But finally management was happy that we were able to mitigate the issue without the revenue loss.
+
+- (S) Couple of weeks back we had issues where the OMS was not able to ingest the orders from the website because some promotions were enabled by business earlier by a day. This  impacting the sales and P1 issue was created. 
+- (T) We analyzed the problem and found that since new promotions were created and hence website was adding multiple promotions in the order.xml in s3 bucket. When OMS was trying to consume the orders they were seeing multiple promotions and was throwing error. So instead of moving away from the situation by saying its OMS issue, I took the ownership and came up with some solution to fix the orders.
+- (A) I created the PowerShell script and used aws cli to download the all the impacted orders from the S3 folder. Once downloaded used the PowerShell script to remove the extra promotions and fixed the orders. Than dropped 18k+ orders(worth 1.1M) back to s3 folder and OMS was able to re-process the orders successfully.
+- (R) It took 3hours to come with the solution which was impacting the customers. But finally management was happy that we were able to mitigate the issue without the revenue loss.
 
 Bias For Action (Getting things done)
 -------------------------------------------------
-S - Business was reporting that company was loosing 30%-40% buy online and pickup at store orders which was a revenue loss.
-T - I was asked to look into this as this was critical bcos of the revenue loss. I broke down this into various task like creating the overall flow document for BOPS, setting up meetings with various parties involved to find out how much time BOPS order takes in each system and how can we fine tune. 
-A - I started looking into this and found that BOPS order are touching various system like Website, OMS, Stores System, Radial and found the issue at multiple places like website was dropping the BOPS order in fire and forget to s3 folder and there was no exception handling and then it calls rest api where it was not considering the commit quantity and hence was taking more orders than available qty. I documented the fix for website and then rest api service and also worked with third party vendor Radial to fine tune the bops processing time.
-R - As a result the failure rate for BOPS order came from 30%-40% to 3% which was a big win. Also on an average BOPS order was taking around 30 minutes to flow to the order. 
 
+- (S) Business was reporting that company was loosing 30%-40% buy online and pickup at store orders which was a revenue loss.
+- (T) I was asked to look into this as this was critical bcos of the revenue loss. I broke down this into various task like creating the overall flow document for BOPS, setting up meetings with various parties involved to find out how much time BOPS order takes in each system and how can we fine tune.
+- (A) I started looking into this and found that BOPS order are touching various system like Website, OMS, Stores System, Radial and found the issue at multiple places like website was dropping the BOPS order in fire and forget to s3 folder and there was no exception handling and then it calls rest api where it was not considering the commit quantity and hence was taking more orders than available qty. I documented the fix for website and then rest api service and also worked with third party vendor Radial to fine tune the bops processing time.
+- (R) As a result the failure rate for BOPS order came from 30%-40% to 3% which was a big win. Also on an average BOPS order was taking around 30 minutes to flow to the order.
