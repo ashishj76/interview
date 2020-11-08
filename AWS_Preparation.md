@@ -97,14 +97,19 @@ DaaS: Data as Service
 	- Server-Side Encryption - KMS     
 
 #  What is the difference between EBS and S3?
-EBS         	                    S3
-Highly scalable	                    Less scalable
-It is a block storage	            It is an object storage
-EBS is faster than S3	            S3 is slower than EBS
-User can access EBS only via 
-the given EC2 instance	
-Anyone can access S3;               it is a public instance.
-It supports File system interface	It supports Web interface
+EBS
+- Highly scalable.
+- It is a block storage.
+- EBS is faster than S3.
+- User can access EBS only via the given EC2 instance.
+- It supports File system interface.
+
+S3
+- Less scalable.
+- It is an object storage.
+- S3 is slower than EBS.
+- Anyone can access S3; it is a public instance.
+- It supports Web interface.
 
 # What is RTO and RPO
 	- RTO - Recovery Time Objection. It is the maximum time your company is willing to wait for the recovery to finish in case of an outage.
