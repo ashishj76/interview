@@ -111,10 +111,16 @@ It supports File system interface	It supports Web interface
 	- RPO - Recovery Point Objective. .It is the maximum data loss company is willing to accept as measured in time. 
 
 # What is the difference between CloudFormation and Elastic Beanstalk
-|CloudFormation|                                                  |Elastic Beanstalk|
-|---------------|                                                 |-----------------|
-|Helps you describe and provision all the infrastructure	       |It provides and environment where you can easily deploy  and run application in resources in the Cloud environment.| 	         Cloud.|
-|It supports the infrastructure needs of many different types    |It Is combined with developer tools and helps you manage the lifecycle  of application Such as enterprise, legacy  etc.|      of the application.|
+
+Elastic Beanstalk
+- It provides and environment where you can easily deploy  and run application in Cloud.
+- It Is combined with developer tools and helps you manage the lifecycle of the application.
+
+CloudFormation:
+- Helps you describe and provision all the infrastructure
+ resources in the Cloud environment. 
+- It supports the infrastructure needs of many different types  of application
+Such as enterprise, legacy  etc.
 
 
 # How to use AWS WAF in monitoring AWS application?
