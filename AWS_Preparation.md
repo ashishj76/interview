@@ -185,10 +185,10 @@ M - Medium Optimized
 
 When did you failed in current job and how did you cope up?
 -------------------------------------------------------------------------------
-S - While working on the Auto Renewal project Business made a call to accept the autorenewal data at stores from customer even 10 months before we started the implementation
-T - Now in last 10 months we had 100+ million orders sitting in s3 folder. During the implementation we analyzed the store data and found that stores were not taking the Billing zip State and Billing year which was mandatory with the Zuora system which was our subscription platform
-A - While the team was working on the implementation I decided to fork out the from the architecture and build the utility to fix the orders. I worked with another team to come up with the repair utility in which we were wrote AWS crawler to scan through all the 100 million order, put in dynamo DB, which will trigger lambda. Lambda will call the UPS service the fetch the address and ffix the order xml and will drop it to another s3 folder. 
-R - This design failed when we tried to run it in production because crawler was not able to handle this. We had to open a ticket with AWS and tried to filter the data for crawler. We had to remove the crawler and use s3 batch to read the data and put in dynamo DB. 
+- S While working on the Auto Renewal project Business made a call to accept the autorenewal data at stores from customer even 10 months before we started the implementation
+- T Now in last 10 months we had 100+ million orders sitting in s3 folder. During the implementation we analyzed the store data and found that stores were not taking the Billing zip State and Billing year which was mandatory with the Zuora system which was our subscription platform
+- A While the team was working on the implementation I decided to fork out the from the architecture and build the utility to fix the orders. I worked with another team to come up with the repair utility in which we were wrote AWS crawler to scan through all the 100 million order, put in dynamo DB, which will trigger lambda. Lambda will call the UPS service the fetch the address and ffix the order xml and will drop it to another s3 folder. 
+- R This design failed when we tried to run it in production because crawler was not able to handle this. We had to open a ticket with AWS and tried to filter the data for crawler. We had to remove the crawler and use s3 batch to read the data and put in dynamo DB. 
 
 Customer Obsession.
 -----------------------------
