@@ -176,6 +176,10 @@ M - Medium Optimized
 	5- Customization: Elastic Beanstalk allows users to select the configurations of AWS services that user want to use them for application development. 
 	6- Management and updates: It updates the application automatically when it changes the platform. Platform updates and infrastructure management are taken care of by AWS professionals.
 
+# What are the differences between continuous integration, continuous delivery, and continuous deployment?
+- Developers practicing continuous integration merge their changes back to the main branch as often as possible. By doing so, you avoid the integration hell that usually happens when people wait for release day to merge their changes into the release branch.
+- Continuous delivery is an extension of continuous integration to make sure that you can release new changes to your customers quickly in a sustainable way. This means that on top of having automated your testing, you also have automated your release process and you can deploy your application at any point of time by clicking on a button.
+- continuous deployment goes one step further than continuous delivery. With this practice, every change that passes all stages of your production pipeline is released to your customers. There's no human intervention, and only a failed test will prevent a new change to be deployed to production.
 
 Situations:
 
@@ -206,3 +210,4 @@ S - Business was reporting that company was loosing 30%-40% buy online and picku
 T - I was asked to look into this as this was critical bcos of the revenue loss. I broke down this into various task like creating the overall flow document for BOPS, setting up meetings with various parties involved to find out how much time BOPS order takes in each system and how can we fine tune. 
 A - I started looking into this and found that BOPS order are touching various system like Website, OMS, Stores System, Radial and found the issue at multiple places like website was dropping the BOPS order in fire and forget to s3 folder and there was no exception handling and then it calls rest api where it was not considering the commit quantity and hence was taking more orders than available qty. I documented the fix for website and then rest api service and also worked with third party vendor Radial to fine tune the bops processing time.
 R - As a result the failure rate for BOPS order came from 30%-40% to 3% which was a big win. Also on an average BOPS order was taking around 30 minutes to flow to the order. 
+
