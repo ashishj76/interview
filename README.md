@@ -1,34 +1,34 @@
 # https://natrajbontha.wordpress.com/2019/08/22/c-interview-questions/
 
 # What are the different types of instances?
-	Following are the types of instances:
-	General purpose
-	Computer Optimized
-	Memory Optimized
-	Storage Optimized
-	Accelerated Computing
+Following are the types of instances:
+- General purpose
+- Computer Optimized
+- Memory Optimized
+- Storage Optimized
+- Accelerated Computing
 	
 # Explain default storage class in S3
 	The default storage class is a Standard frequently accessed.
 
 # Name the types of AMI provided by AWS
 The types of AMI provided by AWS are:
-	Instance store backed
-	EBS backed
+- Instance store backed
+- EBS backed
 
 # List different types of cloud services
 Various types of cloud services are:
-	Software as a Service (SaaS),
-	Data as a Service (DaaS)
-	Platform as a Service (PaaS)
-	Infrastructure as a Service (IaaS).	
+- Software as a Service (SaaS)
+- Data as a Service (DaaS)
+- Platform as a Service (PaaS)
+- Infrastructure as a Service (IaaS).
 
 # What are the different types of Load Balancer in AWS services?
 Two types of Load balancer are:
-	Network Loab Balanacer
-	Application Load Balancer
-	Classic Load Balancer
-	
+- Network Loab Balanacer
+- Application Load Balancer
+- Classic Load Balancer
+
 # Common Question
 ---------------
 # Solid principles
@@ -124,12 +124,12 @@ Routing is functionality that map incoming request to the route handler. The rou
 	
 # What are the various JSON files available in ASP.NET Core?
 There are following JSON files in ASP.NET Core :
-	-	global.json
-	-	launchsettings.json
-	-	appsettings.json
-	-	bundleconfig.json
-	-	bower.json
-	-	package.json
+ - global.json
+ - launchsettings.json
+ - appsettings.json
+ - bundleconfig.json
+ - bower.json
+ - package.json
 
 # How to specify service lifetime for register service that added as a dependency?
 - Singleton. .NET core  will create and share a single instance of the service through the application life.Objects are the same for every object and every request.
@@ -138,16 +138,16 @@ There are following JSON files in ASP.NET Core :
 
 # What are the drawbacks of using a singleton design pattern?
 The major drawbacks of using a singleton design pattern are:
-a)Singleton causes code to be tightly coupled. The singleton object is exposed globally and is available to a whole application. Thus, classes using this object become tightly coupled; any change in the global object will impact all other classes using it.
-b)They hide dependencies instead of exposing them.
-c)Singleton Pattern does not support inheritance.
-d)Singleton principle can be violated by techniques such as cloning. If an application is running on multiple JVM’s, then, in this case, Singleton might be broken.
+- Singleton causes code to be tightly coupled. The singleton object is exposed globally and is available to a whole application. Thus, classes using this object become tightly coupled; any change in the global object will impact all other classes using it.
+- They hide dependencies instead of exposing them.
+- Singleton Pattern does not support inheritance.
+- Singleton principle can be violated by techniques such as cloning. If an application is running on multiple JVM’s, then, in this case, Singleton might be broken.
 
 # Why use a factory class to instantiate a class when we can use a new operator?
 Factory classes provide flexibility in terms of design. Below are some of the benefits of factory class:
-•Factory design pattern results in more decoupled code as it allows us to hide creational logic from dependant code
-•It allows us to introduce an Inversion of Control container
-•It gives you a lot more flexibility when it comes time to change the application as our creational logic is hidden from dependant code
+- Factory design pattern results in more decoupled code as it allows us to hide creational logic from dependant code
+- It allows us to introduce an Inversion of Control container
+- It gives you a lot more flexibility when it comes time to change the application as our creational logic is hidden from dependant code
 
 # What Is CAP Theorem?
 This states that it is not possible for a distributed computer system to simultaneously provide all three of the following guarantees:
