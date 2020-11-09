@@ -1,33 +1,40 @@
 # https://natrajbontha.wordpress.com/2019/08/22/c-interview-questions/
 
-# What are the different types of instances?
-Following are the types of instances:
-- General purpose
-- Computer Optimized
-- Memory Optimized
-- Storage Optimized
-- Accelerated Computing
-	
-# Explain default storage class in S3
-	The default storage class is a Standard frequently accessed.
+# What’s the difference between System.String and System.Text.StringBuilder classes?
+System.String is immutable.  System.StringBuilder was designed with the purpose of having a mutable string where a variety of operations can be performed.
+StringBuilder is used to represent a mutable string of characters. Mutable means the string which can be changed. So String objects are immutable but StringBuilder is the mutable string type. It will not create a new modified instance of the current string object but do the modifications in the existing string object. The complete functionality of StringBuilder is provided by StringBuilder class which is present in System.Text namespace.
 
-# Name the types of AMI provided by AWS
-The types of AMI provided by AWS are:
-- Instance store backed
-- EBS backed
+Need of the StringBuilder: As stated above that the String class objects are immutable which means that if the user will modify any string object it will result into the creation of a new string object. It makes the use of string costly. So when the user needs the repetitive operations on the string then the need of StringBuilder come into existence. It provides the optimized way to deal with the repetitive and multiple string manipulation operations.
 
-# List different types of cloud services
-Various types of cloud services are:
-- Software as a Service (SaaS)
-- Data as a Service (DaaS)
-- Platform as a Service (PaaS)
-- Infrastructure as a Service (IaaS).
+# What’s the difference between the System.Array.CopyTo() and System.Array.Clone()?
+The Clone() method returns a new array (a shallow copy) object containing all the elements in the original array.  The CopyTo() method copies the elements into another existing array.  Both perform a shallow copy.  A shallow copy means the contents (each array element) contains references to the same object as the elements in the original array.  A deep copy (which neither of these methods performs) would create a new instance of each element’s object, resulting in a different, yet identical object. 
 
-# What are the different types of Load Balancer in AWS services?
-Two types of Load balancer are:
-- Network Loab Balanacer
-- Application Load Balancer
-- Classic Load Balancer
+# What’s an abstract class?
+A class that cannot be instantiated.  An abstract class is a class that must be inherited and have the methods overridden. An abstract class can provide implementation for some methods.
+
+# What’s the difference between an interface and abstract class?
+In an interface class, all methods are abstract – there is no implementation.  In an abstract class some methods can be concrete.  In an interface class, no accessibility modifiers are allowed.  An abstract class may have accessibility modifiers.
+
+# What is the difference between a Struct and a Class?
+Structs are value-type variables and are thus saved on the stack, additional overhead but faster retrieval.  Another difference is that structs cannot inherit.
+
+# Whats the differnece betwen Hastable and Dictionary
+Hashtable
+ - Hashtable is included in the System.Collections namespace.
+ - Hashtable is a loosely typed (non-generic) collection, this means it stores key-value pairs of any data types.
+ - Hashtable is thread safe.
+ - Hashtable returns null if we try to find a key which does not exist.
+ - Data retrieval is slower than dictionary because of boxing-unboxing.
+
+ Dictionary
+- Dictionary is included in the System.Collections.Generic namespace.
+- Dictionary is a generic collection. So it can store key-value pairs of specific data types.
+- Only public static members are thread safe in Dictionary.
+- Dictionary throws an exception if we try to find a key which does not exist.
+- Data retrieval is faster than Hashtable.
+
+# What is a satellite assembly?
+When you write a multilingual or multi-cultural application in .NET, and want to distribute the core application separately from the localized modules, the localized assemblies that modify the core application are called satellite assemblies.  
 
 # Common Question
 ---------------

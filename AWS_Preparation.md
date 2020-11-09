@@ -15,6 +15,35 @@ I would like work for amazon not only because it is only one of the greatest com
 I am type of person who doesn’t want to sit still in my job and just do bare minimum. I want to constantly evolve, improve and learn the skills and experience I have gained.
 Amazon will continue to thrive as it puts customers at front of everything it does. For those reasons I feel immensely proud to work for Amazon in this AWS position. 
 
+# What are the different types of instances?
+Following are the types of instances:
+- General purpose
+- Computer Optimized
+- Memory Optimized
+- Storage Optimized
+- Accelerated Computing
+	
+# Explain default storage class in S3
+	- The default storage class is a Standard frequently accessed.
+
+# Name the types of AMI provided by AWS
+The types of AMI provided by AWS are:
+- Instance store backed
+- EBS backed
+
+# List different types of cloud services
+Various types of cloud services are:
+- Software as a Service (SaaS)
+- Data as a Service (DaaS)
+- Platform as a Service (PaaS)
+- Infrastructure as a Service (IaaS).
+
+# What are the different types of Load Balancer in AWS services?
+Two types of Load balancer are:
+- Network Loab Balanacer
+- Application Load Balancer
+- Classic Load Balancer
+
 # What are the core services/components on AWS?
 There are many components or services that AWS offers. The core ones can be broken down into storage, management, security, databases, mobile services, application services, networks and analytical services.
 Some of the standout components are EC2 - which provides scalable compute capacity in cloud. VPC allows users to create their own virtual private networks where they have complete control to launch any AWS services.
