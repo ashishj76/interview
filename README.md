@@ -204,3 +204,112 @@ Unlike relational database property of Strict consistency, eventual consistency 
 Eventually consistent systems are useful at scenarios where absolute consistency is not critical. For example in case of Twitter status update, if some users of the system do not see the latest status from a particular user its may not be very devastating for system.
 
 Eventually consistent systems can not be used for use cases where absolute/strict consistency is required. For example a banking transactions system can not be using eventual consistency since it must consistently have the state of a transaction at any point of time. Your account balance should not show different amount if accessed from different ATM machines.
+
+# What Security Approach Do You Take In Your Solutions?
+I ensure security by guarding databases
+- Against SQL injections
+- Encoding data before it is used.
+- Validating input data prior to its storage or use. Moreover.
+- Implement access control to prevent unauthorized access. This also involves protecting the privacy of data through encryption. Moreover, I use https domains, set strong passwords, and conceal web server information.
+
+# Identify The Tools Used By A Solutions Architect. Why Are They Important And How Are They Use?
+IT solutions architects use the following tools:
+
+- Veracode offers source code analysing services. Whether you want to analyze software developed by third parties or internally, veracode will help you accomplish your goal cost-effectively and quickly.
+- Nagios – this is an open-source application that is used to monitor networks, systems, and infrastructure. It alerts architects whenever something goes wrong.
+- Git – this version control system is applied when solutions architects want to track changes made in source codes during the development of software.
+- TeamCity/GitLab – this is an integrated tool that is used in building and testing software projects.
+- Java/.NET Core./node.js – this is an object-oriented coding language that is used to develop applications.
+- Terminal – this is a command line that helps architects to execute processes. It helps them to download apps or navigate between files very quickly using a single command.
+- Docker – this tool offers an application containerization platform, which allows solutions architects to package software or applications in filesystems. The container can be executed or moved anywhere.
+
+# What Is Meant By Architectural Risk And How Can It Be Mitigated?
+Architecture risk is the possibility of the failure of architectural design to satisfy projects’ requirements. This includes inefficiencies and flaws rejected by sponsors, substandard quality designs, and capacity limitations.
+
+Architecture risk can be mitigated by following accepted and standard design practices and procedures in software development. Moreover, capturing requirement correctly from clients will prevent design flaws.
+
+## REST - Representational STATE Transfer
+
+# What is your understanding of what are RESTful web services? REST - Representational STATE Transfer
+Just like SOAP (Simple Object Access Protocol), which is used to develop web services by the XML method, RESTful web services use web protocol i.e. HTTP protocol method. They have the feature like scalability, maintainability, help multiple application communication built on various programming languages, etc.
+
+RESTful web service implementation defines the method of accessing various resources that are required by the client and he has sent the request to the server through the web browser.The important aspects of this implementation include:
+
+- Resources
+- Request Headers
+- Request Body
+- Response Body
+- Status codes
+
+# Enlist features of RESTful web services.
+
+Every RESTful web services should have the following features and characteristics that are enlisted below:
+
+- Based on the Client-Server representation.
+- Use of HTTP protocol for performing functions like fetching data from the web service, retrieving resources, execution of any query, etc.
+- The communication between the server and client is performed through the medium known as ‘messaging’.
+- Addressing of resources available on the server through URIs.
+- Based on the concept of statelessness where every client request and the response is independent of the other with complete assurance of providing required information.
+- Uses the concept of caching.
+- Works on the Uniform interface.
+
+# What are the core components of the HTTP request and HTTP response?
+
+The core components under HTTP Request are:
+- Verb: Includes methods like GET, PUT, POST, etc.
+- Uniform Resource Identifier for identifying the resources available on the server.
+- HTTP Version for specifying the HTTP version.
+- HTTP Request header for containing the information about the data.
+- HTTP Request body that contains the representation of the resources in use.
+
+The core components under HTTP Response are:
+- Request Code: This contains various codes that determine the status of the server response.
+- HTTP Version for specifying the HTTP version.
+- HTTP Response header for containing the information about the data.
+- HTTP Response body that contains the representation of the resources in use.
+
+# Explain the term ‘Statelessness’ with respect to RESTful WEB service.
+
+In REST, ST itself defines State Transfer and Statelessness means complete isolation. This means, the state of the client’s application is never stored on the server and is passed on.
+
+In this process, the clients send all the information that is required for the server to fulfill the HTTP request that has been sent. Thus every client requests and the response is independent of the other with complete assurance of providing the required information.
+
+Every client passes a ‘session identifier’ which also acts as an identifier for each session.
+
+# Enlist advantages and disadvantages of ‘Statelessness’.
+
+In the above question, we have understood the meaning of statelessness with respect to client-server communication. Now, let us see some of its advantages and disadvantages.
+
+Advantages:
+- Every method required for communication is identified as an independent method i.e. there are no dependencies to other methods.
+- Any previous communication with the client and server is not maintained and thus the whole process is very much simplified.
+- If any information or metadata used earlier in required in another method, then the client sends again that information with the HTTP request.
+- The HTTP protocol and REST web service, both shares the feature of statelessness.
+Disadvantages:
+In every HTTP request from the client, the availability of some information regarding the client state is required by the web service.
+
+# Enlist some important constraints for RESTful web services.
+
+Answer: Every constraint has positive as well as negative impacts and to produce an overall architecture, there should be a balance between both of them.
+Below mentioned are some important constraints for RESTful web service:
+- There should be separate concerns for each server and client which will help to maintain the modularity within the application. This will also reduce the complexity and increase the scalability.
+- The client-server communication should be stateless, which means no previous information is used and the complete execution is done in isolation. In cases of failure, it also helps the client to recover.
+- In client-server communication, the HTTP response should be cacheable so that when required cached copy can be used which in turn enhances the scalability and performance of the server.
+- The fourth constraint is the uniform interface which allows client-server interaction to be easily understood. This constraint is further divided into four sub-constraints as:
+    - Resource Identification
+    - Resource Manipulation
+    - Each message is easily understood and is self-descriptive.
+    - Hypermedia, which is defined as the text with hyperlinks and when clicked, it moves to another application state.
+- Client-server communication should be done on a layered system and thus the client should only have knowledge about the intermediate level with which communication is being done.
+
+# What are the best practices that are to be followed while designing RESTful web services?
+
+To design a secure RESTful web service, there are some best practices or say points that should be considered.
+These are explained as follows:
+- Every input on the server should be validated.
+- Input should be well-formed.
+- Never pass any sensitive data through URL.
+- For any session, the user should be authenticated.
+- Only HTTP error messages should be used for indicating any fault.
+- Use message format that is easily understood and is required by the client.
+- Unified Resource Identifier should be descriptive and easily understood.

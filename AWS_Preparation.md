@@ -79,10 +79,10 @@ Amazon web service has a global infrastructure that is divided into availability
 
 # What are the layers available in cloud computing?
 Ans:  Below listed are the various layers of cloud computing
-SaaS: Software as a Service 
-PaaS: Platform as a Service
-IaaS: Infrastructure as a Service
-DaaS: Data as Service
+- SaaS: Software as a Service 
+- PaaS: Platform as a Service
+- IaaS: Infrastructure as a Service
+- DaaS: Data as Service
 
 # Explain the various storage classes available in S3? 
 	- Standard frequency accessed 
