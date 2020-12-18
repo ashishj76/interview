@@ -57,3 +57,12 @@ Kubectl is a CLI (command-line interface) that is used to run commands against K
 # How can you get a static IP for a Kubernetes load balancer? 
 A static IP for the Kubernetes load balancer can be achieved by changing DNS records since the Kubernetes Master can assign a new static IP address.
 
+# What is a sidecar container, and what would you use it for?
+A sidecar container is a utility container that is used to extend support for a main container in a Pod. Sidecar containers can be paired with one or more main containers, and they enhance the functionality of those main containers. An example would be using a sidecar container specifically to process system logs or for monitoring.
+
+# How do logs work for pods?
+With a traditional server setup, application logs are written to a file and then viewed either on each server or collected by a logging agent and sent to a centralized location. In Kubernetes, however, writing logs to disk from a pod is discouraged since you would then have to manage log files for pods. The better way is to have your application output logs to stdout and stderr. The kubelet on each node collects stdout and stderr on the running pods and then combines them into a log file managed by Kubernetes. Then you can use different kubectl commands to view the logs
+
+# How can you separate resources?
+You can separate resources by using namespaces. These can be created either using kubectl or applying a YAML file. After you have created the namespace you can then place resources, or create new resources, within that namespace. Some people think of namespaces in Kubernetes like a virtual cluster in your actual Kubernetes cluster.
+
