@@ -1,5 +1,19 @@
 # How are Kubernetes and Docker related?
 Docker is an open-source platform used to handle software development. Its main benefit is that it packages the settings and dependencies that the software/application needs to run into a container, which allows for portability and several other advantages. Kubernetes allows for the manual linking and orchestration of several containers, running on multiple hosts that have been created using Docker. 
+Kuberneted is poupular
+- Large open source project
+- Effective persistent storage
+- Multi-cloud support
+- Container health monitoring
+- Robust container deployment
+
+# What are the notable features of Kubernetes?
+- Container Balancing :  It always knows where tp place containers.
+- Services:  Manages containers, offers, security, networking and storage services
+- Self Monitoring - It monitors and continously checks the health of nodes and containers.
+- Scaling : It allows you scaling resources not only vertically but also horizontally.
+- Open- Source: It is an open source platform and can run in any environment.
+- Storrage orchestration : It mounts and adds a storage system to run apps.
 
 # What is orchestration when it comes to software and DevOps? 
 Orchestration refers to the integration of multiple services that allows them to automate processes or synchronize information in a timely fashion. Say, for example, you have six or seven microservices for an application to run. If you place them in separate containers, this would inevitably create obstacles for communication. Orchestration would help in such a situation by enabling all services in individual containers to work seamlessly to accomplish a single goal. 
