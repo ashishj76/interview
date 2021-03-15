@@ -320,3 +320,31 @@ These are explained as follows:
 - Only HTTP error messages should be used for indicating any fault.
 - Use message format that is easily understood and is required by the client.
 - Unified Resource Identifier should be descriptive and easily understood.
+
+# TCP Layer 4
+	- Layer 4 - Application (Telnet/DNS/HTTP/FTP/SNMP/POP3....)
+	- Layer 3 - Transport (TCP/UDP/ICMP)
+	- Layer 2 - Networking/Internet (IP/IPSEC)
+	- Layer 1 - DataLink (Ethernet/ARP)
+	
+# HTTP Layer 7
+	- Layer 7 - Application (HTTP/FTP/SNMP/POP3....)
+	- Layer 6 - Presentation (SSH/FTP/SNMP/POP3....)
+	- Layer 5 - Session (API's sockets/winsocket....)
+	- Layer 4 - Transport (TCP/UDP)
+	- Layer 3 - Networking/Internet (IP/ICMP)
+	- Layer 2 - DataLink (Ethernet/ARP/Switch/Bridge)
+	- Layer 1 - Physical (Coax/Fiber/Wirless/Hubs/Repeaters)
+	
+
+# What are the layers in OSI Reference Models? Describe each layer briefly
+a) Physical Layer (Layer 1): It converts data bits into electrical impulses or radio signals. Example: Ethernet.
+b) Data Link Layer (Layer 2): At the Data Link layer, data packets are encoded and decoded into bits and it provides a 
+   node to node data transfer. This layer also detects the errors that occurred at Layer 1.
+c) Network Layer (Layer 3): This layer transfers variable length data sequence from one node to another node in the same network. 
+   This variable-length data sequence is also known as “Datagrams”.
+d) Transport Layer (Layer 4): It transfers data between nodes and also provides acknowledgment of successful data transmission. 
+   It keeps track of transmission and sends the segments again if the transmission fails.
+e) Session Layer (Layer 5): This layer manages and controls the connections between computers. It establishes, coordinates, exchange and terminates the connections between local and remote applications.
+f) Presentation Layer (Layer 6): It is also called as “Syntax Layer”. Layer 6 transforms the data into the form in which the application layer accepts.
+g) Application Layer (Layer 7): This is the last layer of the OSI Reference Model and is the one that is close to the end-user. Both end-user and application layer interacts with the software application. This layer provides services for email, file transfer, etc.
